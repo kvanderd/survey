@@ -1,23 +1,17 @@
 <div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
+  <% if logged_in? %>
+    <!-- get all survey for current user - loop to display-->
+    <div id='title'> See the results of your surveys, bro</div>
+    <% @surveys.each do |survey| %>
+      <p><a href='/survey/<%=survey.id%>/creator/<%=survey.user_id%>'><%= survey.title%></a></p>
+  <% else %>
+    <div id="login_form">
+      <%= erb :_login_form, :layout => false %>
+    </div>
+    <div id="signup_form">
+      <%= erb :_signup_form, :layout => false %>
+    </div>
+  <% end %>
 
-  <table>
-    <tr>
-      <th>File Description</th>
-      <th>File Location</th>
-    </tr>
-    <tr>
-      <td>This view file</td>
-      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The layout file</td>
-      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The current controller</td>
-      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-  </table>
+
 </div>

@@ -1,17 +1,6 @@
 <div class="container">
-  <% if logged_in? %>
-    <!-- get all survey for current user - loop to display-->
-    <div id='title'> See the results of your surveys, bro</div>
-    <% @surveys.each do |survey| %>
-      <p><a href='/survey/<%=survey.id%>/creator/<%=survey.user_id%>'><%= survey.title%></a></p>
-  <% else %>
-    <div id="login_form">
-      <%= erb :_login_form, :layout => false %>
-    </div>
-    <div id="signup_form">
-      <%= erb :_signup_form, :layout => false %>
-    </div>
-  <% end %>
+
+  <%= index_template %>
 
 
 </div>

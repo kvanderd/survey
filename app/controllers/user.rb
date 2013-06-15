@@ -10,10 +10,10 @@ post '/login' do
 end
 
 post '/signup' do
-  user = User.create(params[:user])
+  @user = User.create(params[:user])
 
-  if user.valid?
-    session[:user_id] = user.id
+  if @user.valid?
+    session[:user_id] = @user.id
     redirect '/'
   else
     #show errors and stuff, need to edit the redirect on line below

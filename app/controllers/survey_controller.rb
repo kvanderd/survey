@@ -18,11 +18,10 @@ post '/surveys/completed' do
   redirect '/'
 end
 
-
-
-get '/surveys/:id/creator/:creator_id' do
-  @creator = User.find(params[:creator_id])
-  redirect '/' unless @creator == current_user
+get '/surveys/:id/results' do
+  @survey = Survey.find(params[:id])
+  creator = @survey.user
+  redirect '/' unless creator == current_user
   erb :showresults
 end
 

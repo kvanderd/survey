@@ -7,6 +7,11 @@ post '/surveys/new' do
   redirect '/'
 end
 
+get '/surveys/all' do
+  @surveys = Survey.all
+  erb :allsurveys
+end
+
 get '/surveys/:id' do
   @survey = Survey.find(params[:id])
   user = current_user
@@ -31,6 +36,7 @@ get '/gtfo' do
 
   erb :gtfo
 end
+
 
 
 

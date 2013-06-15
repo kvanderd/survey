@@ -1,3 +1,11 @@
+<h1><%=@survey.title%></h1>
+<h3>Completed <%=@survey.completed_surveys.length%> times</h3>
+
 <% @survey.questions.each do |question| %>
-<h3><%= question.text %></h3>
+<h3><%= question.question_text %></h3>
+  <ul>
+    <% question.choices.each do |choice| %>
+    <li><%=choice.choice_text%> <%= aggregate_results(@survey.completed_surveys, choice)%></li>
+    <% end %>
+  </ul>
 <% end%>

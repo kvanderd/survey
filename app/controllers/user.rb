@@ -22,7 +22,7 @@ post '/signup' do
 end
 
 
-post '/logout' do 
+get '/logout' do 
   session.clear
-  redirect "/"
+  redirect '/'
 end

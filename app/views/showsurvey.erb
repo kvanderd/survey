@@ -1,0 +1,15 @@
+<h1><%= @survey.title %></h1>
+
+<form action="/surveys/completed" method="post">
+  <input type="hidden" name="survey_id" value="<%=@survey.id%>">
+  <% @survey.questions.each do |question| %>
+    <h3><%= question.question_text %></h3>
+
+    <% question.choices.each do |choice| %>
+      <input type="radio" name="<%=question.id%>" value="<%= choice.id %>"><%= choice.choice_text %></input></br>
+
+    <% end %>
+
+  <% end %>
+  <input type="submit" value="Submit to Kaazam">
+</form>

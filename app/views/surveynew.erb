@@ -1,26 +1,17 @@
 <form action="/surveys/new" method="post">
-  <input type="text" name="title" placeholder="Put the damn Title here">
+  <input type="text" name="title" value="Put the damn Title here">
   <div id="question_dropzone">
     <div id="question_template">
-      <input type="text" name="form[][question]" placeholder="Add Question">
+      <input type="text" name="form[][question]" value="Add Question">
         <div id="choice_dropzone">
-          <input type="text" name="form[][choice][]" placeholder="Enter choice">
-          <input type="text" name="form[][choice][]" placeholder="Enter choice">
+          <button id="add_choice">Add Choice</button>
+          <input type="text" name="form[][choice][]" value="Enter choice">
+          <input type="text" name="form[][choice][]" value="Enter choice">
 
         </div>
-      <button id="remove_button">Remove Question</button>
+      
+      <button class="remove_button">Remove Question</button>
     </div>
-    <div id="question_template">
-      <input type="text" name="form[][question]" placeholder="Add Question">
-        <div id="choice_dropzone">
-          <input type="text" name="form[][choice][]" placeholder="Enter choice">
-          <input type="text" name="form[][choice][]" placeholder="Enter choice">
-
-        </div>
-      <button id="remove_button">Remove Question</button>
-    </div>
-    
-    
   </div>
   <button id="add_button">Add Question</button>
   <input type="submit" value="Submit Gorilla">

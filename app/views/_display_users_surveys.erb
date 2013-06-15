@@ -1,3 +1,8 @@
-<% @surveys.each do |survey| %>
-  <p><a href='/survey/<%=survey.id%>/creator/<%=survey.user_id%>'><%= survey.title%></a></p>
+
+<% if @surveys %>
+  <% @surveys.each do |survey| %>
+    <p><a href='/survey/<%=survey.id%>/creator/<%=survey.user_id%>'><%= survey.title%></a></p>
+  <% end %>
+<% else %>
+  <p>No surveys</p>
 <% end %>

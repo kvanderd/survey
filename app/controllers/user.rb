@@ -1,8 +1,8 @@
 post '/login' do
   p params
-   user = User.find_by_email(params[:user][:email])
-  if user.password == params[:password]
-    session[:user_id] = user.id
+  @user = User.find_by_email(params[:user][:email])
+  if @user.password == params[:user][:password]
+    session[:user_id] = @user.id
     redirect '/'
   else
     redirect '/'

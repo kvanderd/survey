@@ -1,5 +1,4 @@
 get '/surveys/new' do
-
   erb :surveynew
 end
 
@@ -10,6 +9,8 @@ end
 
 get '/surveys/:id' do
   @survey = Survey.find(params[:id])
+  user = current_user
+  redirect '/gtfo' if CompletedSurvey.find_by_survey_id_and_user_id(@survey.id, user.id)
   erb :showsurvey
 end
 
@@ -26,7 +27,10 @@ get '/surveys/:id/results' do
   erb :showresults
 end
 
+get '/gtfo' do
 
+  erb :gtfo
+end
 
 
 

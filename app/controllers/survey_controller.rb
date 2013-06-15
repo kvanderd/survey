@@ -5,6 +5,7 @@ end
 
 post '/surveys/new' do
   submit_data(params)
+  redirect '/'
 end
 
 get '/surveys/:id' do

@@ -1,12 +1,12 @@
 <nav>
   <div id="logo">
-    <a href='/' id="logo"><strong>SurveyKathy</strong></a>
+    <a href='/' id="logo"><strong>SurveyGorilla</strong></a>
   </div>
   <div id="links">
     <ul>
     <% if current_user %>                     
-      <li><a href='#'>Create Survey</a></li>
-      <li><a href='#'>Take Survey</a></li>
+      <li><a href='/surveys/new'>Create Survey</a></li>
+      <li><a href='/surveys/:id'>Take Survey</a></li>
       <li><a href='/logout'>Log Out</a></li>
     <% end %>
     </ul>

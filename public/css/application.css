@@ -2,9 +2,56 @@
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  
 }
 th {
   text-align: left;
 }
 
+#login {
+  background-image: -webkit-radial-gradient(center, circle closest-side, #FFFFFF 0%, #00283B 200%);
+  height: 80px;
+  width: 260px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 13px;
+}
+
+#signup {
+  background-image: -webkit-radial-gradient(center, circle closest-side, #FFFFFF 0%, #00283B 200%);
+  height: 120px;
+  width: 260px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 13px;
+}
+
+
+
+#button {
+  width: 77px;
+  height: 26px;
+  border-radius: 2px;
+  background-color: #00283B;
+  color: #FFFFFF;
+  box-shadow: white;
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  background-image: -webkit-radial-gradient(center, circle closest-side, #FFFFFF 0%, #00283B 200%);
+  height: 1120px;
+  width: 860px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 90px;
+}

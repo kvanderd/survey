@@ -1,0 +1,29 @@
+<form action="/surveys/new" method="post">
+  <input type="text" name="title" placeholder="Put the damn Title here">
+  <div id="question_dropzone">
+    <div id="question_template">
+      <input type="text" name="form[][question]" placeholder="Add Question">
+        <div id="choice_dropzone">
+          <input type="text" name="form[][choice][]" placeholder="Enter choice">
+          <input type="text" name="form[][choice][]" placeholder="Enter choice">
+
+        </div>
+      <button id="remove_button">Remove Question</button>
+    </div>
+    <div id="question_template">
+      <input type="text" name="form[][question]" placeholder="Add Question">
+        <div id="choice_dropzone">
+          <input type="text" name="form[][choice][]" placeholder="Enter choice">
+          <input type="text" name="form[][choice][]" placeholder="Enter choice">
+
+        </div>
+      <button id="remove_button">Remove Question</button>
+    </div>
+    
+    
+  </div>
+  <button id="add_button">Add Question</button>
+  <input type="submit" value="Submit Gorilla">
+  
+</form>
+

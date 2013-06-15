@@ -1,3 +1,4 @@
-class Complete < ActiveRecord::Base
-  # Remember to create a migration!
+class CompleteSurvey < ActiveRecord::Base
+  belongs_to :user
+  belongs_to :reponse
 end

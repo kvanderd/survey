@@ -17,6 +17,8 @@ gem 'rake'
 
 gem 'shotgun'
 gem 'bcrypt-ruby'
+gem 'debugger'
+gem 'better_errors'
 
 group :test do
   gem 'faker'
